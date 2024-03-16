@@ -2,11 +2,13 @@ import React from "react";
 import style from "../Styles/ProfilePage.module.css";
 import CreateFolderBox from "../Components/CreateFolderBox";
 import FolderBox from "../Components/FolderBox";
+import CreateFolder from "./CreateFolder";
 
 export default function ProfilePage() {
   return (
     <>
-      <div className="main">
+      <CreateFolder/>
+      <div className={style.Main}>
         <div className={style.MainHead}>
           <dev className={style.Menu1}></dev>
           <dev className={style.Menu2}></dev>
@@ -15,6 +17,8 @@ export default function ProfilePage() {
             <div className={style.ProInfo}>
                 <p>Name : Devendra Dangare</p>
                 <p>Age : 21</p>
+                <p>Gender : Male</p>
+                <p>Mail : xyzfsv_Eg40@gmail.com</p>
             </div>
           </div>
           <dev className={style.Menu3}></dev>

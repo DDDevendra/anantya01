@@ -1,0 +1,55 @@
+.Main_Crt_Fld {
+  position: absolute;
+  width: 100%;
+  height: 43rem;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: #525252;
+  align-items: center;
+}
+
+.Main_Last {
+  width: 16rem;
+  height: 26rem;
+  background-color: #c8fade;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.Main_Bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+
+  filter: blur(8px);
+  -webkit-filter: blur(2.8px);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(6px);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.FileName {
+  width: 90%;
+  height: 16%;
+  background-color: rebeccapurple;
+}
+
+.Image {
+  width: 90%;
+  height: 48%;
+  background-color: rebeccapurple;
+}
+
+.Footer {
+  width: 90%;
+  height: 13%;
+  background-color: rebeccapurple;
+}
