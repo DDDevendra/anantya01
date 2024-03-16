@@ -1,3 +1,76 @@
-body{
-    background-color: red;
+.MainHead {
+  width: 100%;
+  height: 14rem;
+  display: flex;
+  /* align-items: center; */
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 1% 0%;
+}
+
+.Menu1,
+.Menu2,
+.Menu3,
+.Menu4 {
+  background-color: pink;
+  width: 7rem;
+  height: 3rem;
+  border-radius: 0.3rem;
+}
+
+.MainProfile {
+  width: 30rem;
+  height: 14rem;
+  background-color: #cffff1;
+  border-radius: 0.4rem;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.ProPic {
+    border-radius: 0 0.4rem 0.4rem;
+    width: 11rem;
+    height: 11rem;
+    background-color: #abdbdc;
+    background-image: url("../Assets/user.png");
+    background-position: center;
+    background-size: 6rem;
+    background-repeat: no-repeat;
+}
+
+.ProInfo {
+    width: 17rem;
+    height: 12rem;
+    background-color: #abdbdc;
+    border-radius: 0.4rem 0 0 0.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.4rem;
+    font-size: 1.2rem;
+    font-weight: 400;
+
+}
+
+.BodyMain {
+  width: 100%;
+  height: 27rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.BodyBox {
+    width: 52%;
+    background-color: #e0e0e0;
+    height: 27rem;
+    border-radius: 0.4rem;
+    /* padding: 1rem 1rem; */
+    display: flex;
+    flex-wrap: wrap;
+    overflow: hidden scroll;
+    justify-content: flex-start;
+    align-content: flex-start;
 }

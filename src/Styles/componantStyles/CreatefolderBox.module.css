@@ -1,0 +1,64 @@
+.MainBody{
+    background-color: #effaf7;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 0.2rem;
+    background-image: url('../../Assets/files.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 5rem;
+    margin: 1rem 1rem;
+}
+
+
+.MainBox{
+    background-color: #effaf7;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 0.2rem;
+    background-image: url('../../Assets/drawer.png');
+    background-repeat: no-repeat;
+    background-position: center 2rem;
+    background-size: 4rem 4rem;
+    margin: 1rem 1rem;
+
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.MainBox div{
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0rem 0.5rem;
+}
+
+.MainBody:hover{
+    transform: scale(1.1);
+    transition: 500ms ease-in-out;
+    background-color: #e2f3ee;
+}
+
+.MainBox:hover{
+    transform: scale(1.1);
+    transition: 500ms ease-in-out;
+    background-color: #e2f3ee;
+}
+
+
+
+
+body::-webkit-scrollbar {
+    width: 0; /* Remove scrollbar space */
+    background: transparent; /* Optional: just make scrollbar invisible */
+}
+
+
+body {
+    /* Hide the scrollbar, but still allow scrolling */
+    overflow: auto;
+    /* WebKit (Safari, Chrome) */
+    scrollbar-width: thin;
+    scrollbar-color: transparent transparent; /* For Chrome and Firefox */
+}
