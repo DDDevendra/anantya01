@@ -5,14 +5,16 @@ import SignupPage from './Pages/Signup'
 
 
 import "./App.css";
+import LandingPage from "./Pages/LandingPage";
 
 function App() {
   return (
     <>
     <BrowserRouter>
      <Routes>
+          <Route path="/" element={<LandingPage/>}></Route>
           <Route path="/Home" element={<ProfilePage/>}></Route>
-          <Route path="/" element={<LoginPage/>}></Route>
+          <Route path="/login" element={<LoginPage/>}></Route>
           <Route path="/Signup" element={<SignupPage/>}></Route>
      </Routes>
     </BrowserRouter>

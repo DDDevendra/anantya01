@@ -1,0 +1,60 @@
+.landing-page {
+    display: flex;
+    height: 100vh;
+    background-color: white; /* Set your desired background color */
+  }
+  
+  .left-half, .right-half {
+    width: 50%;
+    color: black;
+  }
+  
+  .left-half {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+    margin-top: 35vh;
+    font-size: 22px;
+     font-family: 'Inter', sans-serif;
+  }
+  
+  .right-half {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../Assets/bg2.svg");
+    background-size: 80% 65%; 
+    background-position: center; 
+    background-repeat: no-repeat;
+  }
+  
+  .right-half img {
+    display: none; /* Hide the img element if not needed */
+  }
+  
+  .button-container {
+    flex: 1; /* Take up the other half of the space */
+    display: flex;
+    justify-content: center; /* Center the button horizontally */
+    align-items: center;
+    margin-top: -180px;/* Add margin to create space between the text and the button */
+  }
+  
+
+  .button-container:hover{
+        transform: scale(1.2);
+        transition: 3000ms ease-in-out;
+  }
+
+
+  .button-container button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #333; /* Adjust button color as needed */
+    color: white;
+    cursor: pointer;
+  }

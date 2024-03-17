@@ -2,7 +2,7 @@ import { useState } from "react";
 import { signupFields } from "../constants/formFields";
 import FormAction from "./FormAction";
 import Input from "./Input";
-import { useNavigate } from "react-router-dom"; 
+import { useNavigate } from "react-router-dom";
 
 const fields = signupFields;
 let fieldsState = {};
@@ -25,7 +25,7 @@ export default function Signup() {
 
   const createAccount = () => {
     // Extract fields from signupState
-    const { email, age, password, confirmPassword ,username} = signupState;
+    const { email, age, password, confirmPassword, username } = signupState;
 
     // Check if required fields are empty
 
@@ -43,26 +43,28 @@ export default function Signup() {
 
     // Construct request body
     const requestBody = {
-      
       name: username,
       email: email,
       password: password,
-      gender: 'Male',
+      gender: "Male",
       image: "string",
-      
+
       contactNumber: "string",
       address: "Ichal",
       // Add any additional fields as required by your backend
     };
-      console.log("reqestbody :",requestBody);
+    console.log("reqestbody :", requestBody);
     // Make POST request to create account
-    fetch('https://hospital-management-backend-n7ck.onrender.com/patient/create-patient', {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(requestBody),
-    })
+    fetch(
+      "https://hospital-management-backend-n7ck.onrender.com/patient/create-patient",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(requestBody),
+      }
+    )
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
@@ -72,9 +74,9 @@ export default function Signup() {
       .then((data) => {
         // Handle successful account creation response
         console.log(data);
-         setTimeout(() => {
-            nav('/Home')
-         }, 2000);
+        setTimeout(() => {
+          nav("/Home");
+        }, 2000);
         // Redirect or perform necessary actions upon successful account creation
       })
       .catch((error) => {
@@ -84,24 +86,44 @@ export default function Signup() {
   };
 
   return (
-    <form className="mt-8 space-y-6" onSubmit={handleSubmit}>
-      <div className="">
-        {fields.map((field) => (
-          <Input
-            key={field.id}
-            handleChange={handleChange}
-            value={signupState[field.id]}
-            labelText={field.labelText}
-            labelFor={field.labelFor}
-            id={field.id}
-            name={field.name}
-            type={field.type}
-            isRequired={field.isRequired}
-            placeholder={field.placeholder}
-          />
-        ))}
-        <FormAction handleSubmit={handleSubmit} text="Signup" />
-      </div>
-    </form>
+    <div
+      className="Mainbody"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "center",
+      }}
+    >
+      <form
+        className="mt-8 space-y-6"
+        onSubmit={handleSubmit}
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          flexDirection: "column",
+          width: "70%",
+        }}
+      >
+        <div className="">
+          {fields.map((field) => (
+            <Input
+              key={field.id}
+              handleChange={handleChange}
+              value={signupState[field.id]}
+              labelText={field.labelText}
+              labelFor={field.labelFor}
+              id={field.id}
+              name={field.name}
+              type={field.type}
+              isRequired={field.isRequired}
+              placeholder={field.placeholder}
+            />
+          ))}
+        </div>
+          <FormAction handleSubmit={handleSubmit} text="Signup"  style={{width:'30%'}}/>
+      </form>
+    </div>
   );
 }

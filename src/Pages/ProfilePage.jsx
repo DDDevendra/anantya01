@@ -22,10 +22,10 @@ export default function ProfilePage() {
           <div className={style.MainProfile}>
             <div className={style.ProPic}><input type="file" /></div>
             <div className={style.ProInfo}>
-                <p>Name : Devendra Dangare</p>
+                <p>Name : Keton Willems</p>
                 <p>Age : 21</p>
                 <p>Gender : Male</p>
-                <p>Mail : xyzfsv_Eg40@gmail.com</p>
+                <p>Mail : Kton_will@gmail.com</p>
             </div>
           </div>
           <dev className={style.Menu3}></dev>
