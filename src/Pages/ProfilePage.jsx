@@ -1,13 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import style from "../Styles/ProfilePage.module.css";
 import CreateFolderBox from "../Components/CreateFolderBox";
 import FolderBox from "../Components/FolderBox";
 import CreateFolder from "./CreateFolder";
 
 export default function ProfilePage() {
+
+    const [isCreateFolder,setisCreateFolder] = useState(false);
+
+    const ChangeCreateFolder = ()=>{
+        setisCreateFolder(!isCreateFolder);
+    }
+
   return (
     <>
-      <CreateFolder/>
+    { isCreateFolder &&  <CreateFolder goBack={ChangeCreateFolder}/>}
       <div className={style.Main}>
         <div className={style.MainHead}>
           <dev className={style.Menu1}></dev>
@@ -27,7 +34,7 @@ export default function ProfilePage() {
 
         <div className={style.BodyMain}>
             <div className={style.BodyBox}>
-                <CreateFolderBox/>
+                <CreateFolderBox goTo={ChangeCreateFolder}/>
                 <FolderBox/>
                 <FolderBox/>
                 <FolderBox/>
