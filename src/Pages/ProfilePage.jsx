@@ -20,7 +20,7 @@ export default function ProfilePage() {
           <dev className={style.Menu1}></dev>
           <dev className={style.Menu2}></dev>
           <div className={style.MainProfile}>
-            <div className={style.ProPic}></div>
+            <div className={style.ProPic}><input type="file" /></div>
             <div className={style.ProInfo}>
                 <p>Name : Devendra Dangare</p>
                 <p>Age : 21</p>
